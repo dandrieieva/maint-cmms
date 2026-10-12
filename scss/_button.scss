@@ -67,3 +67,20 @@
   content: '⌄';
   color: var(--color-text-muted);
 }
+
+.theme-toggle {
+  margin-left: auto;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-copy);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-surface-selected);
+  color: var(--color-text);
+}

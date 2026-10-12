@@ -22,6 +22,13 @@ body {
   line-height: var(--line-height);
 }
 
+body,
+.sidebar,
+.page-header,
+.page-main {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,3 +42,4 @@ body {
   outline: 2px solid var(--color-link);
   outline-offset: 2px;
 }
+

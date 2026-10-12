@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   /* Surfaces */
   --color-bg: #eff3f8;
   --color-surface: #ffffff;
@@ -76,6 +78,8 @@
 }
 
 [data-theme='dark'] {
+  color-scheme: dark;
+
   --color-bg: #1a1d21;
   --color-surface: #23272c;
   --color-surface-selected: #2b3038;

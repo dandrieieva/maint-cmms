@@ -1,5 +1,6 @@
 @charset "UTF-8";
 :root {
+  color-scheme: light;
   /* Surfaces */
   --color-bg: #eff3f8;
   --color-surface: #ffffff;
@@ -65,6 +66,7 @@
 }
 
 [data-theme=dark] {
+  color-scheme: dark;
   --color-bg: #1a1d21;
   --color-surface: #23272c;
   --color-surface-selected: #2b3038;
@@ -244,6 +246,23 @@ body {
   color: var(--color-text-muted);
 }
 
+.theme-toggle {
+  margin-left: auto;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-copy);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-surface-selected);
+  color: var(--color-text);
+}
+
 .badge {
   display: inline-block;
   min-width: 72px;
@@ -330,10 +349,6 @@ body {
   background: var(--color-surface-selected);
 }
 
-.theme-toggle {
-  margin-left: auto;
-}
-
 .toolbar {
   display: flex;
   align-items: center;
@@ -390,6 +405,13 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-md);
   line-height: var(--line-height);
+}
+
+body,
+.sidebar,
+.page-header,
+.page-main {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .visually-hidden {
