@@ -43,7 +43,7 @@
       <button type="button" class="icon-button" aria-pressed="false">Grid</button>
     </div>
 
-    <button type="button" class="button button--primary">Create new</button>
+    <button type="button" class="button button--primary" data-open-modal>Create new</button>
   </section>
 
   <section class="requests" aria-label="Work requests">
@@ -136,7 +136,72 @@
       </tbody>
     </table>
   </section>
+  <dialog class="modal" id="request-modal" aria-labelledby="request-modal-title">
+  <header class="modal__header">
+    <h2 class="modal__title" id="request-modal-title">Work request</h2>
+    <button type="button" class="icon-button" data-close-modal aria-label="Close dialog">✕</button>
+  </header>
+
+  <form class="modal__body form" novalidate>
+    <p class="field field--full">
+      <label class="field__label" for="title">Title</label>
+      <input class="field__input" id="title" name="title" type="text"
+             placeholder="e.g. Air conditioner repairing" required>
+    </p>
+
+    <p class="field field--full">
+      <label class="field__label" for="description">Description</label>
+      <textarea class="field__input field__input--textarea" id="description"
+                name="description" rows="5" placeholder="Describe the problem"></textarea>
+    </p>
+
+    <fieldset class="field field--full priority">
+      <legend class="field__label">Priority</legend>
+      <div class="priority__options">
+        <input class="priority__input" type="radio" id="priority-high" name="priority" value="high" checked>
+        <label class="priority__option" for="priority-high">High</label>
+
+        <input class="priority__input" type="radio" id="priority-medium" name="priority" value="medium">
+        <label class="priority__option" for="priority-medium">Medium</label>
+
+        <input class="priority__input" type="radio" id="priority-low" name="priority" value="low">
+        <label class="priority__option" for="priority-low">Low</label>
+      </div>
+    </fieldset>
+
+    <p class="field">
+      <label class="field__label" for="user-name">User name</label>
+      <input class="field__input" id="user-name" name="userName" type="text" placeholder="John Doe">
+    </p>
+
+    <p class="field">
+      <label class="field__label" for="phone">Phone</label>
+      <input class="field__input" id="phone" name="phone" type="tel" placeholder="(123) 456-7890">
+    </p>
+
+    <p class="field field--full">
+      <label class="field__label" for="email">E-mail</label>
+      <input class="field__input" id="email" name="email" type="email" placeholder="example@mail.com">
+    </p>
+
+    <p class="field field--full">
+      <label class="field__label" for="photos">Photos</label>
+      <span class="dropzone">
+        <span class="dropzone__text">Drag and drop files here to upload</span>
+        <input class="visually-hidden" id="photos" name="photos" type="file" multiple accept=".jpg,.png,.pdf">
+        <label class="button button--ghost" for="photos">Browse files</label>
+        <span class="field__hint">Supported formats: JPG, PNG, PDF.</span>
+      </span>
+    </p>
+
+    <footer class="modal__actions">
+      <button class="button button--primary" type="submit">Send</button>
+      <button class="button button--text" type="button" data-close-modal>Save as draft</button>
+    </footer>
+  </form>
+</dialog>
 </main>
 <script src="js/theme.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
