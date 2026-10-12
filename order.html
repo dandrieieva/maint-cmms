@@ -47,7 +47,7 @@
       <button type="button" class="icon-button" aria-pressed="false">Grid</button>
     </div>
 
-    <button type="button" class="button button--primary" data-open-modal>Create new</button>
+    <button type="button" class="button button--primary" data-open-modal="order-modal">Create new</button>
   </section>
 
   <section class="orders" aria-label="Work orders">
@@ -195,7 +195,119 @@
     </tbody>
   </table>
 </section>
+<dialog class="modal" id="order-modal" aria-labelledby="order-modal-title">
+  <header class="modal__header">
+    <h2 class="modal__title" id="order-modal-title">Work order</h2>
+    <button type="button" class="icon-button" data-close-modal aria-label="Close dialog">✕</button>
+  </header>
+
+  <form class="modal__body form" novalidate>
+    <p class="field field--wide">
+      <label class="field__label" for="title">Title</label>
+      <input class="field__input" id="title" name="title" type="text"
+             placeholder="e.g. Air conditioner repairing" required>
+    </p>
+
+    <p class="field field--quarter">
+      <label class="field__label" for="number">Number</label>
+      <input class="field__input" id="number" name="number" type="text"
+             placeholder="e.g. 456385" required>
+    </p>
+
+    <p class="field field--full">
+      <label class="field__label" for="description">Description</label>
+      <textarea class="field__input field__input--textarea" id="description"
+                name="description" rows="5" placeholder="Describe the problem"></textarea>
+    </p>
+
+    <fieldset class="field field--full priority">
+      <legend class="field__label">Priority</legend>
+      <div class="priority__options">
+        <input class="priority__input" type="radio" id="priority-high" name="priority" value="high" checked>
+        <label class="priority__option priority__option--high" for="priority-high">High</label>
+
+        <input class="priority__input" type="radio" id="priority-medium" name="priority" value="medium">
+        <label class="priority__option priority__option--medium" for="priority-medium">Medium</label>
+
+        <input class="priority__input" type="radio" id="priority-low" name="priority" value="low">
+        <label class="priority__option priority__option--low" for="priority-low">Low</label>
+      </div>
+    </fieldset>
+
+    <p class="field field--full">
+      <label class="field__label" for="address-line-1">Address Line 1</label>
+      <input class="field__input" id="address-line-1" name="addressLine1" type="text" placeholder="e.g., Baker Str. 221b">
+    </p>
+
+    <p class="field">
+      <label class="field__label" for="address-line-2">Address Line 2</label>
+      <input class="field__input" id="address-line-2" name="addressLine2" type="text" placeholder="Office, suit, apt, room etc.">
+    </p>
+
+    <p class="field">
+      <label class="field__label" for="city">City</label>
+      <input class="field__input" id="city" name="city" type="text" placeholder="e.g., Chicago">
+    </p>
+
+    <p class="field">
+      <label class="field__label" for="start-date">Start Date</label>
+      <input class="field__input" id="start-date" name="start-date" type="date">
+    </p>
+
+     <p class="field">
+      <label class="field__label" for="due-date">Due Date</label>
+      <input class="field__input" id="due-date" name="due-date" type="date">
+    </p>
+
+   <p class="field field--full">
+  <label class="field__label" for="order-category">Category</label>
+  <select class="field__input" id="order-category" name="category">
+    <option value="">Select category</option>
+    <option value="repairing">Repairing</option>
+    <option value="handyman">Handyman</option>
+    <option value="sanitization">Sanitization</option>
+    <option value="painting">Painting</option>
+  </select>
+</p>
+
+ <p class="field field--full">
+  <label class="field__label" for="order-assign">Assign Workers</label>
+  <select class="field__input" id="order-assign" name="assign">
+    <option value="">Select worker</option>
+    <option value="worker1">John Travolta</option>
+    <option value="worker2">Samuel L. Jackson</option>
+    <option value="worker3">Petro Schur</option>
+  </select>
+</p>
+
+ <p class="field field--full">
+  <label class="field__label" for="order-tasks">Tasks</label>
+  <select class="field__input" id="order-tasks" name="tasks">
+    <option value="">Select task</option>
+    <option value="task1">Task 1</option>
+    <option value="task2">Task 2</option>
+    <option value="task3">Task 3</option>
+  </select>
+</p>
+
+ <p class="field field--full">
+  <label class="field__label" for="order-tools">Tools</label>
+  <select class="field__input" id="order-tools" name="tools">
+    <option value="">Select tool</option>
+    <option value="tool1">Tool 1</option>
+    <option value="tool2">Tool 2</option>
+    <option value="tool3">Tool 3</option>
+  </select>
+</p>
+
+    <footer class="modal__actions">
+      <button class="button button--primary" type="submit">Create</button>
+      <button class="button button--text" type="button" data-close-modal>Save as draft</button>
+    </footer>
+  </form>
+</dialog>
 </main>
 <script src="js/theme.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
