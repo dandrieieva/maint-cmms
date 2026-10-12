@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Order List — MainT</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <aside class="sidebar">
+  <a class="sidebar__logo" href="index.html">MainT</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <ul>
+      <li>
+  <a class="sidebar__link" href="index.html">
+    Work Request List
+    <span class="sidebar__badge">6</span>
+  </a>
+</li>
+<li>
+  <a class="sidebar__link sidebar__link--active" href="order.html" aria-current="page">
+    Work Order List
+  </a>
+</li>
+      <li><a class="sidebar__link" href="#">Workers</a></li>
+      <li><a class="sidebar__link" href="#">Tools</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<header class="page-header">
+  <h1 class="page-header__title">Work Order List</h1>
+  <button type="button" class="theme-toggle">Dark</button>
+  <img class="page-header__avatar" src="images/avatar.jpeg" alt="Bohdana Andrieieva">
+</header>
+
+<main class="page-main">
+  <section class="toolbar" aria-label="List controls">
+    <button type="button" class="icon-button" aria-label="Filter">Filter</button>
+
+    <label class="search">
+      <span class="visually-hidden">Search requests</span>
+      <input type="search" class="search__input" placeholder="Search">
+    </label>
+
+    <div class="view-switch" role="group" aria-label="View mode">
+      <button type="button" class="icon-button icon-button--active" aria-pressed="true">List</button>
+      <button type="button" class="icon-button" aria-pressed="false">Grid</button>
+    </div>
+
+    <button type="button" class="button button--primary" data-open-modal>Create new</button>
+  </section>
+
+  <section class="orders" aria-label="Work orders">
+  <table class="requests-table">
+    <thead>
+      <tr>
+        <th scope="col"><input type="checkbox" aria-label="Select all orders"></th>
+        <th scope="col"><button type="button" class="sort">Priority</button></th>
+        <th scope="col">Number</th>
+        <th scope="col"><button type="button" class="sort">Title</button></th>
+        <th scope="col"><button type="button" class="sort">Assigned workers</button></th>
+        <th scope="col">Category</th>
+        <th scope="col"><button type="button" class="sort">Due date</button></th>
+        <th scope="col"><button type="button" class="sort">Last updated</button></th>
+        <th scope="col"><span class="visually-hidden">Actions</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--high">High</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling. Air conditioner stopped cooling.</td>
+        <td>Courtney Henry</td>
+        <td>Repairing</td>
+        <td>07/27/26</td>
+        <td>5 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--medium">Medium</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Cameron Williamson</td>
+        <td>Repairing, Handyman</td>
+        <td>07/27/26</td>
+        <td>11 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--low">Low</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Devon Lane</td>
+        <td>Sanitization</td>
+        <td>07/27/26</td>
+        <td>2 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--high">High</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Courtney Henry</td>
+        <td>Repairing</td>
+        <td>07/27/26</td>
+        <td>5 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--medium">Medium</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Cameron Williamson</td>
+        <td>Repairing, Handyman</td>
+        <td>07/27/26</td>
+        <td>11 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--low">Low</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Devon Lane</td>
+        <td>Sanitization</td>
+        <td>07/27/26</td>
+        <td>2 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--high">High</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Courtney Henry</td>
+        <td>Repairing</td>
+        <td>07/27/26</td>
+        <td>5 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--medium">Medium</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Cameron Williamson</td>
+        <td>Repairing, Handyman</td>
+        <td>07/27/26</td>
+        <td>11 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" aria-label="Select order 456385"></td>
+        <td><span class="badge badge--low">Low</span></td>
+        <td>456385</td>
+        <td class="requests-table__title">Air conditioner stopped cooling</td>
+        <td>Devon Lane</td>
+        <td>Sanitization</td>
+        <td>07/27/26</td>
+        <td>2 hours ago</td>
+        <td class="requests-table__actions">
+          <button type="button" class="icon-button" aria-label="Edit order">Edit</button>
+          <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+</main>
+<script src="js/theme.js"></script>
+</body>
+</html>

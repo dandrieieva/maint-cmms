@@ -160,6 +160,7 @@ body {
 .requests-table__title {
   color: var(--color-text);
   font-weight: var(--font-weight-semibold);
+  max-width: 220px;
 }
 
 .requests-table__description {
