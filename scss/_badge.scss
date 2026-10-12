@@ -1,0 +1,24 @@
+.badge {
+  display: inline-block;
+  min-width: 72px;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}
+
+.badge--high {
+  background: var(--color-danger-light);
+  color: var(--color-danger-dark);
+}
+
+.badge--medium {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.badge--low {
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
+}
