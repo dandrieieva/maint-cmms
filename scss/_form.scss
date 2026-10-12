@@ -8,10 +8,23 @@
   flex-direction: column;
   gap: var(--space-xs);
   margin: 0;
+  grid-column: span 3;
 }
 
 .field--full {
   grid-column: 1 / -1;
+}
+
+.field--third {
+  grid-column: span 2;
+}
+
+.field--quarter {
+  grid-column: span 2;
+}
+
+.field--wide {
+  grid-column: span 4;
 }
 
 .field__label {
@@ -106,7 +119,7 @@
 
 .modal__body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--space-lg);
   padding: var(--space-xl);
   max-width: none;
@@ -158,10 +171,22 @@
   white-space: nowrap;
 }
 
-.priority__input:checked + .priority__option {
-  border-color: var(--color-primary);
+.priority__input:checked + .priority__option--high {
+  border-color: var(--color-danger);
   background: var(--color-danger-light);
-  color: var(--color-primary);
+  color: var(--color-danger-dark);
+}
+
+.priority__input:checked + .priority__option--medium {
+  border-color: var(--color-warning-dark);
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.priority__input:checked + .priority__option--low {
+  border-color: var(--color-info-dark);
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
 }
 
 .priority__input:focus-visible + .priority__option {
