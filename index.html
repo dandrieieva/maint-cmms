@@ -6,5 +6,136 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <aside class="sidebar">
+  <a class="sidebar__logo" href="index.html">MainT</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <ul>
+      <li>
+        <a class="sidebar__link sidebar__link--active" href="index.html" aria-current="page">
+          Work Request List
+          <span class="sidebar__badge">68</span>
+        </a>
+      </li>
+      <li><a class="sidebar__link" href="#">Work Order List</a></li>
+      <li><a class="sidebar__link" href="#">Workers</a></li>
+      <li><a class="sidebar__link" href="#">Tools</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<header class="page-header">
+  <h1 class="page-header__title">Work Request List</h1>
+  <button type="button" class="theme-toggle">Dark</button>
+  <img class="page-header__avatar" src="" alt="Bohdana Andrieieva">
+</header>
+
+<main class="page-main">
+  <section class="toolbar" aria-label="List controls">
+    <button type="button" class="icon-button" aria-label="Filter">Filter</button>
+
+    <label class="search">
+      <span class="visually-hidden">Search requests</span>
+      <input type="search" class="search__input" placeholder="Search">
+    </label>
+
+    <div class="view-switch" role="group" aria-label="View mode">
+      <button type="button" class="icon-button icon-button--active" aria-pressed="true">List</button>
+      <button type="button" class="icon-button" aria-pressed="false">Grid</button>
+    </div>
+
+    <button type="button" class="button button--primary">Create new</button>
+  </section>
+
+  <section class="requests" aria-label="Work requests">
+    <table class="requests-table">
+      <thead>
+        <tr>
+          <th scope="col">
+            <input type="checkbox" aria-label="Select all requests">
+          </th>
+          <th scope="col"><button type="button" class="sort">Priority</button></th>
+          <th scope="col"><button type="button" class="sort">Title</button></th>
+          <th scope="col"><button type="button" class="sort">User name</button></th>
+          <th scope="col">Description</th>
+          <th scope="col"><span class="visually-hidden">Actions</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--high">High</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Courtney Henry</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--medium">Medium</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Annette Black</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--low">Low</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Wade Warren</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--high">High</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Brooklyn Simmons</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--medium">Medium</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Guy Hawkins</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select request WR-148"></td>
+          <td><span class="badge badge--low">Low</span></td>
+          <td class="requests-table__title">Broken AC Whynter ARC-148MS</td>
+          <td>Marvin McKinney</td>
+          <td class="requests-table__description">Unit stopped cooling, makes loud noise on start.</td>
+          <td class="requests-table__actions">
+            <button type="button" class="icon-button icon-button--approve" aria-label="Approve">Approve</button>
+            <button type="button" class="icon-button icon-button--reject" aria-label="Reject">Reject</button>
+            <button type="button" class="icon-button" aria-label="Expand row">Expand</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
 </body>
 </html>
